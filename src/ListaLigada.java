@@ -7,7 +7,7 @@ public class ListaLigada {
         // criando o nó com o dado, e definindo o proximo elemento (primeiro)
         No no = new No(dado, primeiro);
 
-        // o primeiro deixa ser o primeiro, e o nó recem adicionado passa a 
+        // o primeiro deixa ser o primeiro, e o nó recem adicionado passa a
         // ser o primeiro
         primeiro = no;
 
@@ -62,7 +62,8 @@ public class ListaLigada {
 
     public String toString() {
         // retorna [] quando a lista está vazia
-        if (tamanho == 0) return "[]";
+        if (tamanho == 0)
+            return "[]";
 
         // inicia a construção da saída
         // toda lista começa com [ e termina com ]
@@ -91,20 +92,26 @@ public class ListaLigada {
         return builder.toString();
     }
 
- public boolean existe(int posicao){
-     return posicao >= 0 && posicao <= tamanho;
- }
+    public boolean existe(int posicao) {
+        return posicao >= 0 && posicao <= tamanho;
+    }
 
- public int contem(Object dado){
-     No atual = this.primeiro;
-     int posicao = -1;
-     while(atual != null){
-        posicao++;
-         if(atual.getDado().equals(dado)){
-             return posicao; // se contém, retorna a posição do elemento
-         }
-         atual = atual.getProximo();
-     }
-     return -1; // não contém o dado na lista dinâmica
-}
+    public int contem(Object dado) {
+        No atual = this.primeiro;
+        int posicao = 0;
+        while (atual != null) {
+
+            if (atual.getDado().equals(dado)) {
+                return posicao; // se contém, retorna a posição do elemento
+            }
+            atual = atual.getProximo();
+            posicao++;
+        }
+        return -1; // não contém o dado na lista dinâmica
+    }
+
+    public void excluirComeco() {
+
+    }
+
 }
