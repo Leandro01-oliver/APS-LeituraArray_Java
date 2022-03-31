@@ -1,4 +1,4 @@
-public class ListaArray {
+public class ListaLigada {
     private No primeiro;
     private No ultimo;
     private int tamanho;
@@ -90,4 +90,21 @@ public class ListaArray {
         // retorna o texto (string) que representa a lista
         return builder.toString();
     }
+
+ public boolean existe(int posicao){
+     return posicao >= 0 && posicao <= tamanho;
+ }
+
+ public int contem(Object dado){
+     No atual = this.primeiro;
+     int posicao = -1;
+     while(atual != null){
+        posicao++;
+         if(atual.getDado().equals(dado)){
+             return posicao; // se contém, retorna a posição do elemento
+         }
+         atual = atual.getProximo();
+     }
+     return -1; // não contém o dado na lista dinâmica
+}
 }
