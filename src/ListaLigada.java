@@ -111,7 +111,44 @@ public class ListaLigada {
     }
 
     public void excluirComeco() {
-
+        if (tamanho > 0) {
+            primeiro = primeiro.getProximo();
+            tamanho--;
+            if (tamanho == 0) {
+                ultimo = null;
+            }
+        }
     }
 
+    public void excluirFim() {
+        if (tamanho > 0) {
+            if (tamanho == 1) {
+                excluirComeco();
+            } else {
+                var penultimo = getNo(tamanho - 2);
+                primeiro.setProximo(null);
+                ultimo = penultimo;
+                tamanho--;
+            }
+        }
+    }
+
+    public void excluir(int posicao) {
+        if (existe(posicao)) {
+            if (posicao == 0) {
+                excluirComeco();
+            }else if(posicao == tamanho  -1){
+                excluirFim();
+            }else{
+                var anterior = getNo(posicao - 1);
+
+                // var atual = anterior.getProximo();
+                // var proximo = atual.getProximo();
+                // anterior.setProximo(proximo);
+
+                anterior.setProximo(anterior.getProximo().getProximo());
+                tamanho--;
+            }
+        }
+    }
 }

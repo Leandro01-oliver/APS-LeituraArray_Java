@@ -27,6 +27,11 @@ public class App {
         System.out.println("Posicao 4: " + lista.getDado(4));
 
         lista.adiciona(2, "Liynaa");
+        lista.excluirComeco();
+        System.out.println(lista.toString());
+        lista.excluirFim();
+        System.out.println(lista.toString());
+        lista.excluir(2);
         System.out.println(lista.toString());
     }
 }
