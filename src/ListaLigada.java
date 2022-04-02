@@ -77,7 +77,7 @@ public class ListaLigada {
         for (int i = 0; i < tamanho - 1; i++) {
             // adicionando a lista o dado,
             builder.append(atual.getDado());
-            builder.append(", ");
+            builder.append(", \n");
 
             // o nó atual é atualizado com o próximo (lembra que a lista é ligada)
             atual = atual.getProximo();
