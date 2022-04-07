@@ -1,31 +1,40 @@
 public class Curso {
     private int id;
-    private String nome;
-    private int CargaHoraria;
+    private String nome;  
+    private String coordenador;
+    private int cargaHoraria;
 
-    public Curso(int id, String nome,int cargaHoraria) {
+    public Curso(int id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.CargaHoraria = cargaHoraria;
     }
 
     public String toString() {
-        return id+"."+nome;
+        return nome + " (" + id + ")";
     }
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public int getCargaHoraria() {
-        return CargaHoraria;
+    public String getCoordenador() {
+        return coordenador;
     }
-
+    public void setCoordenador(String coordenador) {
+        this.coordenador = coordenador;
+    }
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
     public void setCargaHoraria(int cargaHoraria) {
-        CargaHoraria = cargaHoraria;
+        this.cargaHoraria = cargaHoraria;
     }
 }

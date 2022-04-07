@@ -1,28 +1,29 @@
-public class No {
-    private Object dado;
-    private No proximo; 
+public class No<T> {
+    private T dado;
+    private No<T> proximo; 
 
-    public No(Object dado, No proximo) {
+    public No(T dado, No<T> proximo) {
         this.dado = dado;
         this.proximo = proximo;
     }
-    public No(Object dado) {
+    
+    public No(T dado) {
         this.dado = dado;
     }
 
-    public Object getDado() {
+    public T getDado() {
         return dado;
     }
 
-    public void setDado(Object value) {
+    public void setDado(T value) {
         dado = value;
     }
 
-    public No getProximo() {
+    public No<T> getProximo() {
         return proximo;
     }
 
-    public void setProximo(No value) {
+    public void setProximo(No<T> value) {
         proximo = value;
     }
 }

@@ -1,4 +1,6 @@
-1;Sistemas de Informacao
-2;Engenharia de Computacao
-3;Administracao
-4;Direito
+1;Programacao Orientada a Objetos;80
+2;Programacao Web;80
+3;Algoritmos;120
+4;Banco de dados;80
+5;Estrutura de Dados I;80
+6;Estrutura de Dados II;80
